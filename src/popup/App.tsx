@@ -78,7 +78,6 @@ export const App = () => {
   useEffect(() => {
     chrome.storage.local.get("selectedText", (data) => {
       if(data.selectedText !== undefined) {
-        console.log(data.selectedText)
         onSubmit(data.selectedText)
       }
     })

@@ -23,9 +23,7 @@ chrome.contextMenus.onClicked.addListener(async (info) => {
       width: 640,
       height: 540,
       }, () => {
-        chrome.storage.local.set({ selectedText }, () => {
-          console.log("Text saved")
-        })
+        chrome.storage.local.set({ selectedText })
       }
     )
   }
