@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Nosis",
+  "version": "1.0",
+  "description": "Nosis",
+  "icons": {
+    "128": "icon.png"
+  },
+  "action": {
+    "default_title": "Nosis",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "tabs",
+    "activeTab"
+  ]
+}
